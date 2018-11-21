@@ -7,3 +7,4 @@ graphql self study
 #### npm install
 #### npm run build
 #### Press F5 to run debug or npm run server 
+#### open browser at http://localhost:8081/graphql
