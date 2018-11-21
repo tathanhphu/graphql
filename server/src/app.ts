@@ -4,10 +4,10 @@ import { ApolloServer } from 'apollo-server-express';
 import { resolve } from 'path';
 import { readFileSync } from 'fs';
 import * as bodyParser from 'body-parser';
-import { LoginInfo } from './models/user';
-import * as userService  from './graphql/resolvers/user.resolver';
-export type Root = undefined;
-export const rootValue: Root = undefined;
+import { LoginInfo, Root } from './models';
+import * as services  from './graphql/resolvers';
+
+
 
 let app = express();
 
@@ -23,7 +23,7 @@ const typeDefs = readFileSync(resolve(__dirname, 'graphql', 'schema.gql'), { enc
 
 const resolvers = {
   Query: {
-    login: (root: Root, { input }: { input: LoginInfo }) => userService.login(input)
+    login: (root: Root, { input }: { input: LoginInfo }) => services.login(input)
   }
 }
 
