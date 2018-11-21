@@ -1,0 +1,16 @@
+type User {
+  userName: String!
+  accessToken: String!
+}
+
+input LoginInput {
+  userName: String
+  password: String
+}
+type Query {
+  login(input: LoginInput): User
+}
+
+schema {
+  query: Query
+}
