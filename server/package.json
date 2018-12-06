@@ -9,7 +9,8 @@
     "build": "npm run clean && tsc && copyfiles -u 1 -e \"**/*.ts\" \"src/**/*\" dist",
     "server": "node dist/app.js"
   },
-  "author": "",
+  "private": true,
+  "author": "tathanhphu@gmail.com",
   "license": "ISC",
   "dependencies": {
     "@types/knex": "^0.15.1",
